@@ -35,11 +35,12 @@ public class InfoActivity extends AppCompatActivity {
         }
     }
 
-    // ***
-    // TODO - Task 2 - Launch the Google Maps Activity
-    // ***
+    public void createPhoneIntent(View view) {
+        Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+        Uri phoneUri = Uri.parse("tel:0123456789");
+        dialIntent.setData(phoneUri);
 
-    // ***
-    // TODO - Task 3 - Launch the Phone Activity
-    // ***
+        startActivity(dialIntent);
+
+    }
 }
